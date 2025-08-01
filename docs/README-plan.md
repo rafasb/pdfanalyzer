@@ -15,11 +15,11 @@
 
 ## Fase 3: Desarrollo del frontend
  - [x] Inicializar proyecto Vue y configurar estilos personalizados en CSS puro
- - [ ] Crear componentes para carga de archivos y visualización de resultados
- - [ ] Implementar comunicación con la API backend
- - [ ] Desarrollar vistas principales y navegación
- - [ ] Añadir validaciones y feedback al usuario
- - [ ] Implementar pruebas de componentes y vistas
+ - [x] Crear componentes para carga de archivos y visualización de resultados
+ - [x] Implementar comunicación con la API backend
+ - [x] Desarrollar vistas principales y navegación
+ - [x] Añadir validaciones y feedback al usuario
+ - [x] Implementar pruebas de componentes y vistas
 
 ## Fase 4: Integración y pruebas
  - [ ] Integrar frontend y backend

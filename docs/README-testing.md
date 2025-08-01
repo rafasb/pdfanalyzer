@@ -91,19 +91,16 @@ pytest tests/unit/test_pdf_services.py::test_extract_metadata
 ### Frontend
 ```bash
 # Ejecutar todas las pruebas
-npm run test
+npx vitest run
 
 # Ejecutar pruebas con cobertura
-npm run test:coverage
+npx vitest run --coverage
 
 # Ejecutar pruebas en modo watch
-npm run test:watch
+npx vitest watch
 
 # Ejecutar pruebas específicas
-npm run test -- --grep "FileUpload"
-
-# Ejecutar pruebas de integración
-npm run test:integration
+npx vitest run --grep "PdfUpload"
 ```
 
 ## Criterios de Calidad
@@ -164,17 +161,24 @@ markers =
     unit: marks tests as unit tests
 ```
 
-### vitest.config.js
-```javascript
+### vitest.config.ts
+```typescript
 import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src')
+    }
+  },
   test: {
     environment: 'jsdom',
     coverage: {
-      reporter: ['text', 'html'],
+      provider: 'v8',
+      reporter: ['text', 'json', 'html'],
       threshold: {
         global: {
           branches: 80,

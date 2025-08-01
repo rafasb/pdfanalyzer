@@ -13,8 +13,8 @@ Mantiene un histórico de las tareas completadas.
 [x] Crear componentes para carga de archivos y visualización de resultados
 [x] Implementar comunicación con la API backend (`/upload`, `/analyze`)
 [x] Desarrollar vistas principales y navegación
-[ ] Añadir validaciones y feedback al usuario
-[ ] Implementar pruebas de componentes y vistas
+[x] Añadir validaciones y feedback al usuario
+[x] Implementar pruebas de componentes y vistas
 
 ## Recomendaciones para el desarrollo
 - Mantener la estructura modular en `src/components` y `src/views`

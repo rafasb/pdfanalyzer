@@ -10,8 +10,11 @@
 </template>
 
 <script setup>
+
 import { ref } from 'vue'
 import axios from 'axios'
+import PdfUpload from '@/components/PdfUpload.vue'
+import AnalyzeResult from '@/components/AnalyzeResult.vue'
 
 const analysisResult = ref(null)
 

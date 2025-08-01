@@ -64,7 +64,7 @@ async function handleUpload() {
     })
     success.value = 'Archivo subido correctamente.'
     error.value = ''
-    emit('upload-success', file.value.name)
+    emit('upload-success', file.value)
   } catch (err) {
     error.value = err.response?.data?.detail || 'Error al subir el archivo.'
     success.value = ''

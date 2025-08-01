@@ -1,26 +1,22 @@
 <template>
   <div v-if="result" class="analyze-result">
     <h2 class="analyze-result-title">📊 Resultados del Análisis</h2>
-    <div class="analyze-result-grid">
-      <div class="analyze-result-card analyze-result-card-file">
-        <h3 class="analyze-result-card-title">📄 Archivo</h3>
-        <p>{{ result.filename }}</p>
-      </div>
+    <div class="analyze-result-grid single-column">
       <div class="analyze-result-card analyze-result-card-meta">
         <h3 class="analyze-result-card-title">📋 Metadatos</h3>
         <pre class="analyze-result-meta">{{ JSON.stringify(result.metadata, null, 2) }}</pre>
       </div>
       <div class="analyze-result-card analyze-result-card-prot">
         <h3 class="analyze-result-card-title">🔒 Protección</h3>
-        <p>{{ result.protection }}</p>
+        <pre>{{ JSON.stringify(result.protection, null, 2) }}</pre>
       </div>
       <div class="analyze-result-card analyze-result-card-form">
         <h3 class="analyze-result-card-title">📝 Formularios</h3>
-        <p>{{ result.forms }}</p>
+        <pre>{{ JSON.stringify(result.forms, null, 2) }}</pre>
       </div>
       <div class="analyze-result-card analyze-result-card-sign">
         <h3 class="analyze-result-card-title">✍️ Firmas</h3>
-        <p>{{ result.signatures }}</p>
+        <pre>{{ JSON.stringify(result.signatures, null, 2) }}</pre>
       </div>
     </div>
   </div>

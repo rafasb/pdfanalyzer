@@ -17,9 +17,10 @@
       <button 
         type="submit" 
         class="pdf-upload-btn"
-        :disabled="!file"
+        :disabled="!file || loading"
       >
-        🚀 Subir y Analizar PDF
+        <span v-if="loading">⏳ Procesando...</span>
+        <span v-else>🚀 Subir y Analizar PDF</span>
       </button>
     </form>
     <div v-if="error" class="pdf-upload-error">
@@ -32,13 +33,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import axios from 'axios'
-import { defineEmits } from 'vue'
 
+import { ref } from 'vue'
 const file = ref(null)
 const error = ref('')
 const success = ref('')
+const loading = ref(false)
 const emit = defineEmits(['upload-success'])
 
 function onFileChange(e) {
@@ -46,8 +46,21 @@ function onFileChange(e) {
   success.value = ''
   const selected = e.target.files[0]
   if (!selected) return
+  // Validación tipo
   if (selected.type !== 'application/pdf') {
     error.value = 'Solo se permiten archivos PDF.'
+    file.value = null
+    return
+  }
+  // Validación tamaño (máx 10MB)
+  if (selected.size > 10 * 1024 * 1024) {
+    error.value = 'El archivo supera el tamaño máximo permitido (10MB).'
+    file.value = null
+    return
+  }
+  // Validación nombre
+  if (!selected.name.toLowerCase().endsWith('.pdf')) {
+    error.value = 'El archivo debe tener extensión .pdf.'
     file.value = null
     return
   }
@@ -56,20 +69,11 @@ function onFileChange(e) {
 
 async function handleUpload() {
   if (!file.value) return
-  const formData = new FormData()
-  formData.append('file', file.value)
-  try {
-    const response = await axios.post('http://localhost:8000/upload', formData, {
-      headers: { 'Content-Type': 'multipart/form-data' }
-    })
-    success.value = 'Archivo subido correctamente.'
-    error.value = ''
-    emit('upload-success', file.value)
-  } catch (err) {
-    error.value = err.response?.data?.detail || 'Error al subir el archivo.'
-    success.value = ''
-  }
+  error.value = ''
+  success.value = ''
+  emit('upload-success', file.value)
 }
+// El feedback de éxito/error se muestra en el análisis
 </script>
 
 <style src="@/assets/pdfupload.css"></style>

@@ -7,14 +7,14 @@
  - [x] Configurar repositorio y herramientas de control de versiones
 
 ## Fase 2: Desarrollo del backend
- - [ ] Configurar entorno FastAPI y dependencias
- - [ ] Implementar endpoints para carga y análisis de PDFs
- - [ ] Integrar librerías de análisis PDF (PyMuPDF, pikepdf, PyPDF2)
- - [ ] Desarrollar lógica para extracción de metadatos, protección, formularios y firmas
- - [ ] Implementar pruebas unitarias y de integración
+ - [x] Configurar entorno FastAPI y dependencias
+ - [x] Implementar endpoints para carga y análisis de PDFs
+ - [x] Integrar librerías de análisis PDF (PyMuPDF, pikepdf, PyPDF2)
+ - [x] Desarrollar lógica para extracción de metadatos, protección, formularios y firmas
+ - [x] Implementar pruebas unitarias y de integración
 
 ## Fase 3: Desarrollo del frontend
- - [ ] Inicializar proyecto Vue y configurar estilos personalizados en CSS puro
+ - [x] Inicializar proyecto Vue y configurar estilos personalizados en CSS puro
  - [ ] Crear componentes para carga de archivos y visualización de resultados
  - [ ] Implementar comunicación con la API backend
  - [ ] Desarrollar vistas principales y navegación

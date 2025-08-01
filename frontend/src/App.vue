@@ -3,17 +3,21 @@
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50">
-    <nav class="bg-blue-700 text-white px-4 py-3 flex justify-between items-center">
-      <div class="font-bold text-lg">PDFAnalyzer</div>
-      <div class="space-x-4">
-        <router-link to="/" class="hover:underline">Inicio</router-link>
-        <router-link to="/about" class="hover:underline">Acerca de</router-link>
+  <div>
+    <nav class="app-nav">
+      <div class="app-title">PDFAnalyzer</div>
+      <div class="app-links">
+        <router-link to="/" class="app-link">Inicio</router-link>
+        <router-link to="/about" class="app-link">Acerca de</router-link>
       </div>
     </nav>
-    <router-view />
+    <main class="app-main">
+      <div class="app-content">
+        <router-view />
+      </div>
+    </main>
   </div>
 </template>
 <style scoped>
-/* Puedes agregar estilos globales aquí si lo necesitas */
+/* Estilos en src/assets/app.css */
 </style>

@@ -1,0 +1,67 @@
+/* Estilos para AnalyzeResult.vue */
+.analyze-result {
+  margin-top: 2rem;
+}
+.analyze-result-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.analyze-result-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 600px) {
+  .analyze-result-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.analyze-result-card {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid #e5e7eb;
+}
+.analyze-result-card-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.analyze-result-card-file { border-left: 5px solid #2563eb; }
+.analyze-result-card-meta { border-left: 5px solid #64748b; }
+.analyze-result-card-prot { border-left: 5px solid #facc15; }
+.analyze-result-card-form { border-left: 5px solid #22c55e; }
+.analyze-result-card-sign { border-left: 5px solid #a21caf; }
+.analyze-result-meta {
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  color: #444;
+  max-height: 120px;
+  overflow: auto;
+  border: 1px solid #e5e7eb;
+}
+.analyze-result-empty {
+  margin-top: 2rem;
+  text-align: center;
+}
+.analyze-result-empty-box {
+  background: #f3f4f6;
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  padding: 2rem;
+  display: inline-block;
+}
+.analyze-result-empty-title {
+  color: #555;
+  font-size: 1.2rem;
+}
+.analyze-result-empty-desc {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}

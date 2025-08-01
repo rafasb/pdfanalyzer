@@ -1,33 +1,32 @@
 <template>
-  <div class="mb-8">
-    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Subir PDF para Análisis</h2>
-    <form @submit.prevent="handleUpload" class="space-y-4">
-      <div class="relative">
+  <div class="pdf-upload">
+    <h2 class="pdf-upload-title">Subir PDF para Análisis</h2>
+    <form @submit.prevent="handleUpload" class="pdf-upload-form">
+      <div class="pdf-upload-input-wrapper">
         <input 
           type="file" 
           accept="application/pdf" 
           @change="onFileChange" 
-          class="w-full p-4 border-2 border-dashed border-blue-300 rounded-lg hover:border-blue-400 focus:border-blue-500 focus:outline-none transition-colors cursor-pointer"
-          :class="{ 'border-red-300': error, 'border-green-300': success }"
+          class="pdf-upload-input"
         />
-        <div class="absolute inset-0 flex items-center justify-center pointer-events-none text-gray-500">
+        <div class="pdf-upload-input-label">
           <span v-if="!file">📄 Selecciona un archivo PDF</span>
-          <span v-else class="text-blue-600 font-medium">{{ file.name }}</span>
+          <span v-else class="pdf-upload-filename">{{ file.name }}</span>
         </div>
       </div>
       <button 
         type="submit" 
-        class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors font-medium"
+        class="pdf-upload-btn"
         :disabled="!file"
       >
         🚀 Subir y Analizar PDF
       </button>
     </form>
-    <div v-if="error" class="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
-      <p class="text-red-700 text-sm">❌ {{ error }}</p>
+    <div v-if="error" class="pdf-upload-error">
+      <p>❌ {{ error }}</p>
     </div>
-    <div v-if="success" class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
-      <p class="text-green-700 text-sm">✅ {{ success }}</p>
+    <div v-if="success" class="pdf-upload-success">
+      <p>✅ {{ success }}</p>
     </div>
   </div>
 </template>
@@ -72,3 +71,5 @@ async function handleUpload() {
   }
 }
 </script>
+
+<style src="@/assets/pdfupload.css"></style>

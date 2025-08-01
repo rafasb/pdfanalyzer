@@ -1,0 +1,57 @@
+/* Estilos para AboutView.vue */
+.about-view {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0e7ff 0%, #fff 50%, #bae6fd 100%);
+}
+.about-view-card {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2.5rem 2rem;
+  margin-top: 2rem;
+}
+.about-view-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 2px 8px #e0e7ff;
+}
+.about-view-desc {
+  margin-bottom: 1.5rem;
+  color: #444;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.about-view-list {
+  list-style: disc inside;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+.about-view-list span {
+  font-weight: bold;
+  color: #2563eb;
+}
+.about-view-link {
+  color: #2563eb;
+  text-decoration: underline;
+}
+.about-view-footer {
+  margin-top: 2rem;
+  color: #888;
+  font-size: 1rem;
+  text-align: center;
+}
+.about-view-note {
+  color: #888;
+  font-size: 0.95rem;
+  text-align: center;
+}

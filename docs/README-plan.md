@@ -14,7 +14,7 @@
  - [ ] Implementar pruebas unitarias y de integración
 
 ## Fase 3: Desarrollo del frontend
- - [ ] Inicializar proyecto Vue y configurar Tailwind CSS
+ - [ ] Inicializar proyecto Vue y configurar estilos personalizados en CSS puro
  - [ ] Crear componentes para carga de archivos y visualización de resultados
  - [ ] Implementar comunicación con la API backend
  - [ ] Desarrollar vistas principales y navegación

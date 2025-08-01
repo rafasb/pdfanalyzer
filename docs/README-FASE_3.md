@@ -9,7 +9,7 @@ Mantiene un histórico de las tareas completadas.
 - Comunicación por HTTP (JSON)
 
 ## Checklist de tareas principales
-[x] Inicializar proyecto Vue y configurar Tailwind CSS (NOTA: Instalar tailwindcss Versión 3)
+[x] Inicializar proyecto Vue y configurar estilos personalizados en CSS puro
 [x] Crear componentes para carga de archivos y visualización de resultados
 [x] Implementar comunicación con la API backend (`/upload`, `/analyze`)
 [x] Desarrollar vistas principales y navegación

@@ -4,7 +4,7 @@ PDFAnalyzer está compuesto por dos grandes módulos: backend y frontend, comuni
 
 ## Componentes principales
 
-- **Frontend (Vue + Tailwind CSS):**
+- **Frontend (Vue + CSS puro):**
   - Interfaz web para carga de PDFs y visualización de resultados.
   - Comunicación con el backend mediante peticiones HTTP.
   - Presentación clara y estructurada de los análisis.

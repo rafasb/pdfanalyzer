@@ -13,11 +13,11 @@ pdfanalyzer/
 │   ├── requirements.txt    # Dependencias de Python
 │   └── README.md           # Documentación específica del backend
 │
-├── frontend/               # Aplicación web (Vue + Tailwind)
+├── frontend/               # Aplicación web (Vue + CSS puro)
 │   ├── src/                # Código fuente principal del frontend
 │   │   ├── components/     # Componentes Vue reutilizables
 │   │   ├── views/          # Vistas principales de la app
-│   │   ├── assets/         # Imágenes, estilos, fuentes, etc.
+│   │   ├── assets/         # Imágenes, estilos (CSS), fuentes, etc.
 │   │   ├── router/         # Configuración de rutas
 │   │   ├── store/          # Estado global (Vuex/Pinia)
 │   │   └── App.vue         # Componente raíz

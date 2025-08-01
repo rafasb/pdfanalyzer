@@ -1,0 +1,9 @@
+[Vue warn]: Unhandled error during execution of setup function 
+  at <HomeView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< undefined > > 
+  at <RouterView > 
+  at <App> runtime-core.esm-bundler.js:51:13
+[Vue warn]: Unhandled error during execution of component update 
+  at <RouterView > 
+  at <App> runtime-core.esm-bundler.js:51:13
+Uncaught (in promise) ReferenceError: ref is not defined
+    setup HomeView.vue:12

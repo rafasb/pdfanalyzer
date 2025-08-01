@@ -8,7 +8,7 @@ Este documento guía el desarrollo del frontend y la integración con el backend
 - Comunicación por HTTP (JSON)
 
 ## Checklist de tareas principales
-- [ ] Inicializar proyecto Vue y configurar Tailwind CSS
+- [ ] Inicializar proyecto Vue y configurar Tailwind CSS (NOTA: Instalar tailwindcss Versión 3)
 - [ ] Crear componentes para carga de archivos y visualización de resultados
 - [ ] Implementar comunicación con la API backend (`/upload`, `/analyze`)
 - [ ] Desarrollar vistas principales y navegación

@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pymupdf
+pikepdf
+PyPDF2
+httpx
+python-multipart
+pytest

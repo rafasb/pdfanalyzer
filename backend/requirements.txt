@@ -6,3 +6,5 @@ PyPDF2
 httpx
 python-multipart
 pytest
+pyhanko
+pyhanko-certvalidator

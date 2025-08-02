@@ -1,14 +1,19 @@
-from PyPDF2 import PdfReader
-from io import BytesIO
+
+import fitz  # PyMuPDF
 
 def check_forms(pdf_bytes: bytes) -> dict:
     try:
-        reader = PdfReader(BytesIO(pdf_bytes))
-        fields = reader.get_fields()
-        has_forms = bool(fields)
-        num_fields = len(fields) if fields else 0
-        field_names = list(fields.keys()) if fields else []
-        field_types = [fields[name].get('/FT', 'Unknown') for name in field_names] if fields else []
+        doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+        field_names = []
+        field_types = []
+        for page in doc:
+            widgets = page.widgets()
+            if widgets:
+                for widget in widgets:
+                    field_names.append(widget.field_name)
+                    field_types.append(widget.field_type)
+        has_forms = len(field_names) > 0
+        num_fields = len(field_names)
         return {
             "has_forms": has_forms,
             "num_fields": num_fields,

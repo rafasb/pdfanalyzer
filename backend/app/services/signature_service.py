@@ -4,7 +4,7 @@ from io import BytesIO
 def check_signatures(pdf_bytes: bytes) -> dict:
     try:
         pdf_stream = BytesIO(pdf_bytes)
-        reader = PdfFileReader(pdf_stream)
+        reader = PdfFileReader(pdf_stream, strict=False)
         signatures = []
         
         # Usar la propiedad embedded_signatures que está cacheada en el reader
@@ -34,12 +34,13 @@ def check_signatures(pdf_bytes: bytes) -> dict:
                         except Exception:
                             pass
                     
-                    if hasattr(sig, 'signing_time'):
-                        try:
-                            if sig.signing_time:
-                                signer_info["signing_time"] = sig.signing_time.isoformat()
-                        except Exception:
-                            pass
+                    
+                    # if hasattr(sig, 'signing_time'):
+                    #     try:
+                    #         if sig.signing_time:
+                    #             signer_info["signing_time"] = sig.signing_time.isoformat()
+                    #     except Exception:
+                    #         pass
                     
                     signatures.append(signer_info)
                     

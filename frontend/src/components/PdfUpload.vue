@@ -9,10 +9,6 @@
           @change="onFileChange" 
           class="pdf-upload-input"
         />
-        <div class="pdf-upload-input-label">
-          <span v-if="!file">📄 Selecciona un archivo PDF</span>
-          <span v-else class="pdf-upload-filename">{{ file.name }}</span>
-        </div>
       </div>
       <button 
         type="submit" 

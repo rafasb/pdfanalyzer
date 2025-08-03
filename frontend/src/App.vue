@@ -4,13 +4,14 @@
 
 <template>
   <div>
-    <nav class="app-nav">
+    <!-- Mantenemos la barra de navegación comentada -->
+    <!-- <nav class="app-nav">
       <div class="app-title">PDFAnalyzer</div>
       <div class="app-links">
         <router-link to="/" class="app-link">Inicio</router-link>
         <router-link to="/about" class="app-link">Acerca de</router-link>
       </div>
-    </nav>
+    </nav> -->
     <main class="app-main">
       <div class="app-content">
         <router-view />

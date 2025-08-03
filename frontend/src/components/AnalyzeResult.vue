@@ -10,14 +10,14 @@
         <h3 class="analyze-result-card-title">🔒 Protección</h3>
         <pre>{{ JSON.stringify(result.protection, null, 2) }}</pre>
       </div>
-      <div class="analyze-result-card analyze-result-card-form">
-        <h3 class="analyze-result-card-title">📝 Formularios</h3>
-        <pre>{{ JSON.stringify(result.forms, null, 2) }}</pre>
-      </div>
       <div class="analyze-result-card analyze-result-card-sign">
         <h3 class="analyze-result-card-title">✍️ Firmas</h3>
         <pre>{{ JSON.stringify(result.signatures, null, 2) }}</pre>
       </div>
+      <div class="analyze-result-card analyze-result-card-form">
+        <h3 class="analyze-result-card-title">📝 Formularios</h3>
+        <pre>{{ JSON.stringify(result.forms, null, 2) }}</pre>
+      </div>     
     </div>
   </div>
   <div v-else class="analyze-result-empty">

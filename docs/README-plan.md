@@ -22,15 +22,15 @@
  - [x] Implementar pruebas de componentes y vistas
 
 ## Fase 4: Integración y pruebas
- - [ ] Integrar frontend y backend
- - [ ] Realizar pruebas funcionales con diferentes tipos de PDFs
- - [ ] Validar seguridad y privacidad en el manejo de archivos
+ - [x] Integrar frontend y backend
+ - [x] Realizar pruebas funcionales con diferentes tipos de PDFs
+ - [ ] Validar seguridad y privacidad en el manejo de archivos (pendiente de encriptación en despliegue mediante Docker)
  - [ ] Optimizar rendimiento y experiencia de usuario
 
 ## Fase 5: Documentación y despliegue
  - [ ] Redactar documentación técnica y de usuario
  - [ ] Preparar ejemplos y casos de uso
- - [ ] Configurar despliegue en entorno de producción
+ - [x] Configurar despliegue en entorno de producción
  - [ ] Crear y documentar archivos de configuración para Docker y Docker Compose
  - [ ] Publicar y mantener el proyecto
 

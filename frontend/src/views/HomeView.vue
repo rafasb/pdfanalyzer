@@ -29,7 +29,7 @@ async function fetchAnalysis(file) {
   try {
     const formData = new FormData()
     formData.append('file', file)
-    const response = await axios.post('http://localhost:8000/analyze', formData, {
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/analyze`, formData, {
       headers: { 'Content-Type': 'multipart/form-data' }
     })
     analysisResult.value = response.data

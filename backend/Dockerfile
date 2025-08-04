@@ -7,8 +7,8 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Copiar los archivos necesarios al contenedor
-COPY backend/requirements.txt requirements.txt
-COPY backend/app /app
+COPY requirements.txt requirements.txt
+COPY app /app
 
 # Instalar las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
@@ -17,4 +17,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8000
 
 # Comando para ejecutar el servidor FastAPI con Uvicorn
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

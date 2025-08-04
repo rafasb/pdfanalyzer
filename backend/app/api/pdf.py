@@ -1,9 +1,9 @@
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
-from app.services.metadata_service import extract_metadata
-from app.services.protection_service import check_protection
-from app.services.forms_service import check_forms
-from app.services.signature_service import check_signatures
+from services.metadata_service import extract_metadata
+from services.protection_service import check_protection
+from services.forms_service import check_forms
+from services.signature_service import check_signatures
 
 router = APIRouter()
 

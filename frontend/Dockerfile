@@ -7,14 +7,17 @@ FROM node:20-slim
 WORKDIR /app
 
 # Copiar los archivos necesarios al contenedor
-COPY frontend/package.json package.json
-COPY frontend/package-lock.json package-lock.json
-COPY frontend/ /app
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+COPY . /app
 
 # Instalar las dependencias
 RUN npm install
 
-# Construir la aplicación para producción
+
+# Construir la aplicación para producción usando la variable VITE_API_URL
+ARG VITE_API_URL=http://172.29.132.20:8000
+ENV VITE_API_URL=$VITE_API_URL
 RUN npm run build
 
 # Exponer el puerto en el que se ejecutará el servidor

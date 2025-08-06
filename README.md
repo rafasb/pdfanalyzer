@@ -12,6 +12,10 @@ Desarrollar una herramienta web que permita a los usuarios cargar un archivo PDF
 - Versiones y estándares PDF
 - Otros elementos relevantes (anotaciones, adjuntos, etc.)
 
+# Instrucciones
+1. Crea el fichero .env tomando como ejemplo el fichero **.env.example**
+2. Ejecuta `docker compose up -d`
+
 ## Primer nivel de estructura de directorios
 - `/frontend`: Código de la interfaz web
 - `/backend`: API para procesar y analizar PDFs
